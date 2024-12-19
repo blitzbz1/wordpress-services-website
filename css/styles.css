@@ -1,0 +1,46 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background: #0073e6;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  header .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 2rem;
+  }
+  
+  #services {
+    text-align: center;
+    background: #f4f4f4;
+  }
+  
+  .service {
+    margin: 1rem 0;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+  }
+  
