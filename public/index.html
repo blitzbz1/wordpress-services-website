@@ -6,237 +6,244 @@
   <meta name="description" content="Professional WordPress Services: Site Creation, Updates, and SEO.">
   <title>PWS - Professional WordPress Services</title>
   <style>
-    /* Global Styles */
+    /* General Styles */
     body {
-      margin: 0;
       font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
       color: #333;
-      line-height: 1.6;
     }
+    
     a {
       text-decoration: none;
       color: inherit;
     }
-    h1, h2, h3 {
-      margin: 0;
-    }
+
+    /* Header */
     header {
-      position: relative;
-      height: 100vh;
-      background: url('src/img/hero-bg.jpg') no-repeat center/cover;
+      background: linear-gradient(135deg, #0056b3, #0073e6);
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 5rem 2rem;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    header .hero-content {
-      max-width: 800px;
-      padding: 1rem;
-    }
+    
     header h1 {
       font-size: 3.5rem;
       margin-bottom: 1rem;
     }
+
     header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
-    header .cta-buttons a {
-      padding: 1rem 2rem;
-      margin: 0.5rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    header .btn-primary {
-      background: #0073e6;
-      color: white;
-      border: none;
-    }
-    header .btn-primary:hover {
-      background: #0056b3;
-    }
-    header .btn-secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-    header .btn-secondary:hover {
-      background: white;
-      color: #0073e6;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 0.5rem 1rem;
-      z-index: 1000;
-    }
-    nav ul {
+
+    .cta-buttons {
       display: flex;
       justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      font-weight: bold;
-      color: #0073e6;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #0056b3;
-    }
-    section {
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
-    .service-card {
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      transition: transform 0.3s;
+
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #0056b3;
+      background-color: white;
+      border-radius: 50px;
+      border: 2px solid #0056b3;
+      transition: all 0.3s ease;
     }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    /* Services Section */
+    .services-section {
+      background-color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
     .service-card:hover {
       transform: translateY(-10px);
     }
-    .service-card h3 {
-      color: #0073e6;
-      margin-bottom: 1rem;
-    }
-    .about-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .about-section img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      width: 100%;
-      padding: 1rem;
-      background: #0073e6;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    footer {
-      background: #333;
-      color: white;
+
+    /* Testimonials Section */
+    .testimonials-section {
+      background-color: #f8f8f8;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 1rem 0;
+    }
+
+    .testimonial {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial span {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #0073e6;
+      color: white;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #0056b3;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #003f6b;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .services-section .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header Section -->
   <header>
-    <div class="hero-content">
-      <h1>Build, Optimize, Thrive</h1>
-      <p>Transform your online presence with expert WordPress services.</p>
-      <div class="cta-buttons">
-        <a href="#services" class="btn-primary">Get Started</a>
-        <a href="#contact" class="btn-secondary">Contact Us</a>
-      </div>
+    <h1>Your WordPress Journey Starts Here</h1>
+    <p>We empower businesses with modern, responsive, and SEO-optimized WordPress solutions.</p>
+    <div class="cta-buttons">
+      <a href="#services" class="cta-button">Explore Our Services</a>
+      <a href="#contact" class="cta-button">Contact Us</a>
     </div>
   </header>
-  
-  <nav>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <section id="services">
+  <!-- Services Section -->
+  <section id="services" class="services-section">
     <h2>Our Services</h2>
-    <div class="services-grid">
+    <div class="service-cards">
       <div class="service-card">
-        <h3>Custom WordPress Sites</h3>
-        <p>Crafting beautiful, functional, and responsive websites for your business.</p>
+        <h3>WordPress Website Design</h3>
+        <p>We design custom, mobile-friendly websites tailored to your business needs.</p>
       </div>
       <div class="service-card">
         <h3>Website Maintenance</h3>
-        <p>Keep your website secure, updated, and running smoothly.</p>
+        <p>We ensure your website stays secure, updated, and optimized for peak performance.</p>
       </div>
       <div class="service-card">
         <h3>SEO Optimization</h3>
-        <p>Enhance your visibility and grow your traffic organically.</p>
+        <p>Boost your search engine ranking and drive more traffic with our expert SEO services.</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about-section">
-    <div>
-      <h2>About Us</h2>
-      <p>PWS is dedicated to delivering WordPress solutions that drive success. Our team combines creativity with technical expertise to build sites that impress and perform.</p>
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonial">
+      <p>"PWS transformed our website and helped us reach a larger audience. The results speak for themselves!"</p>
+      <span>- John Doe, CEO</span>
     </div>
-    <img src="src/img/about.jpg" alt="About PWS">
-  </section>
-
-  <section id="process" class="process-grid">
-    <h2>Our Process</h2>
-    <div>
-      <h3>Consultation</h3>
-      <p>Understanding your needs and goals.</p>
-    </div>
-    <div>
-      <h3>Design & Development</h3>
-      <p>Creating a stunning, functional website.</p>
-    </div>
-    <div>
-      <h3>Delivery & Support</h3>
-      <p>Ensuring smooth launch and continued success.</p>
+    <div class="testimonial">
+      <p>"The team at PWS delivered outstanding work! Our site looks amazing and works flawlessly."</p>
+      <span>- Jane Smith, Marketing Director</span>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Get In Touch</h2>
+    <div class="contact-info">
+      <p>Email us at: <strong>info@pws.com</strong></p>
+      <p>Call us: <strong>+1 800-555-1234</strong></p>
+    </div>
+    <button class="contact-button">Reach Out to Us</button>
   </section>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 PWS - Professional WordPress Services. All rights reserved.</p>
+    <p>&copy; 2024 PWS - Professional WordPress Services. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
